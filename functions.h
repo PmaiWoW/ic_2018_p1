@@ -3,7 +3,14 @@
 #include <stdlib.h> // Library needed to use the rand() function
 
 char option; // Variable that will keep the input for the option
-int number = 0; // Variable that will keep the amount of money, started at 0
+int balance = 100, currentbet = 0, number = 0; // Variables that keep the
+// player's initial balance, current bet, starting at 0, and the variable that
+// will save the player's chosen number to bet
+char bet_type = '0'; // Variable that will serve to check which kind of bet the
+// player chose
+
+//srand((unsigned int) time(NULL));
+
 
 // Function for the N option
 void nCase () {
@@ -18,7 +25,8 @@ void nCase () {
 		// Will inform the user which number they picked
 		printf("You're betting on number: %d\n", number);
 	}
-	// If the number chosen does not match the conditions, it'll exibihit the error message
+	// If the number chosen does not match the conditions, it'll exibihit
+	//the error message
 	else {
 		printf("You little sneak! Choose again.\n");
 	}	
@@ -42,7 +50,8 @@ void eCase() {
 		// Will inform the user which number they picked
 		printf("You're betting on number %d\n", number);
 	}
-	// If the number chosen does not match the conditions, it'll exibihit the error message
+	// If the number chosen does not match the conditions, it'll exibihit the
+	// error message
 	else {
 		printf("Hey! You chose even numbers, now you have to comply!\n");
 	}
@@ -55,7 +64,7 @@ void eCase() {
 }
 
 
-// Function for the E option
+// Function for the O option
 void oCase() {
 
  	// Asks the user the number they want to bet on
@@ -68,7 +77,8 @@ void oCase() {
 		// Will inform the user which number they picked
 		printf("You're betting on number %d\n", number);
 	}
-	// If the number chosen does not match the conditions, it'll exibihit the error message
+	// If the number chosen does not match the conditions, it'll exibihit
+	// the error message
 	else {
 		printf("Hey! You chose odd numbers, now you have to comply!\n");
 	}
@@ -82,7 +92,77 @@ void oCase() {
 
 void rCase() {
 
-	printf("Alright, let's rock and ROLL");
+	printf("Alright, let's get ROLLing");
 
-	
+	if (bet_type == 'n') { 
+
+		nCase();
+		for (int i = 0; i <= 36; i++) {
+        	printf("And the winning number isss......... %d!\n", rand());
+        }
+
+        if (number == rand()) {
+        	currentbet = currentbet * 35;
+        	printf("Hey! Congrats my guy, you just won %d!\n", currentbet);
+        	balance = currentbet + balance;
+        	currentbet = 0;
+        	printf("Your current balance is: %d\n", balance);
+        	printf("Current bet is: %d\n", currentbet);
+        }
+        else {
+        	printf("... Shucks... Better luck next time, though!");
+        	balance = balance - currentbet;
+        	currentbet = 0;
+        	printf("Your current balance is: %d\n", balance);
+        	printf("Your current bet is: %d\n", currentbet);
+        }
+	}
+
+	else if (bet_type == 'e') {
+
+		eCase();
+		for (int i = 0; i <= (number % 2 == 0); i++) {
+        	printf("And the winning number isss......... %d!\n", rand());
+        }
+
+        if (number == rand()) {
+        	currentbet = currentbet * 2;
+        	printf("Hey! Congrats my guy, you just won %d!\n", currentbet);
+        	balance = currentbet + balance;
+        	currentbet = 0;
+        	printf("Your current balance is: %d\n", balance);
+        	printf("Current bet is: %d\n", currentbet);
+        }
+        else {
+        	printf("... Shucks... Better luck next time, though!");
+        	balance = balance - currentbet;
+        	currentbet = 0;
+        	printf("Your current balance is: %d\n", balance);
+        	printf("Your current bet is: %d\n", currentbet);
+        }
+	}
+
+	else if (bet_type == 'o') {
+
+		oCase();
+		for (int i = 0; i <= !(number % 2 == 0); i++) {
+        	printf("And the winning number isss......... %d!\n", rand());
+        }
+
+        if (number == rand()) {
+        	currentbet = currentbet * 2;
+        	printf("Hey! Congrats my guy, you just won %d!\n", currentbet);
+        	balance = currentbet + balance;
+        	currentbet = 0;
+        	printf("Your current balance is: %d\n", balance);
+        	printf("Current bet is: %d\n", currentbet);
+        }
+        else {
+        	printf("... Shucks... Better luck next time, though!");
+        	balance = balance - currentbet;
+        	currentbet = 0;
+        	printf("Your current balance is: %d\n", balance);
+        	printf("Your current bet is: %d\n", currentbet);
+        }
+	}
 }
