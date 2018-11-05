@@ -6,7 +6,7 @@
 
 int main(void) {
 
-	int balance = 100, currentbet = 0, number = 0;
+	int balance = 100, currentbet = 0, betNumber = 0;
 	char option;
 	char betType = '0';
 
@@ -35,15 +35,15 @@ int main(void) {
 			case 'b':
 			
 				printf("How much money do you want to bet? \n");
-				scanf("%d", &number);
+				scanf("%d", &betNumber);
 
-				if(number <= balance) {
-					currentbet = number;
+				if(betNumber <= balance) {
+					currentbet = betNumber + currentbet;
 					printf("You're betting: %d euros\n", currentbet);
 					balance =  balance - currentbet;
 					printf("Your current balance is: %d euros\n", balance);
 				}
-				else if (number > balance) {
+				else if (betNumber > balance) {
 					printf("Getting a little excited, aren't we? Bet on a value"
 							" you can actually afford, please.\n");
 				}
