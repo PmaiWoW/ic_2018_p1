@@ -1,15 +1,17 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-#include <stdbool.h>
 #include "functions.h"
 
 
-int main() {
+int main(void) {
 
 	int balance = 100, currentbet = 0, number = 0;
 	char option;
-	bool c = false;
+	char bet_type = '0';
+
+	srand((unsigned int) time(NULL));
+
 
 	printf("\n Hello, and welcome to russian roulette!\n");
 	printf("This is your current balance: %d\n", balance);
@@ -42,7 +44,8 @@ int main() {
 					printf("Your current balance is: %d\n", balance);
 				}
 				else if (number > balance) {
-					printf("Getting a little excited, aren't we? Bet on a value you can actually afford, please.\n");
+					printf("Getting a little excited, aren't we? Bet on a value"
+						" you can actually afford, please.\n");
 				}
 				else {
 					printf("Dude.......\n");
@@ -62,6 +65,7 @@ int main() {
 
 
 			case 'n':
+				bet_type = 'n';
 
 				if (currentbet == 0) {
 					printf ("Bet first, my dude\n");
@@ -74,6 +78,7 @@ int main() {
 
 
 			case 'e':
+				bet_type = 'e';
 
 				if (currentbet == 0) {
 					printf ("Bet first, my dude\n");
@@ -85,6 +90,7 @@ int main() {
 
 
 			case 'o':
+				bet_type = 'o';
 
 				if (currentbet == 0) {
 					printf ("Bet first, my dude\n");
@@ -104,14 +110,27 @@ int main() {
 					rCase();
 				}
 
+
+			case 'h':
+
+				printf("Can't you read what was written in the beginning...?\n"
+					"Fine! Before you can do anything, you have to bet. To do"
+					" that, choose 'b'. Next you can choose what kind of bet you"
+					" want. 'n' for 1-36 and if you win, you get 35x the amount"
+					" you put down. 'e' for even numbers, and 'o' for odd."
+					" You get double the amount. Once you're done playing, just"
+					"choose 'c' and we'll give you your total. Capiche?\n");
+
+
+			case 'c':
+				return option;
+
+
 			default:
 
 			printf("Not an option, try again\n");
 
 		} 
 	}
-	
-	
-// Fazer return no cCase();
 	return 0;
 }
