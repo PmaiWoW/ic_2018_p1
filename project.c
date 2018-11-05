@@ -8,7 +8,7 @@ int main(void) {
 
 	int balance = 100, currentbet = 0, number = 0;
 	char option;
-	char bet_type = '0';
+	char betType = '0';
 
 	srand((unsigned int) time(NULL));
 
@@ -39,19 +39,19 @@ int main(void) {
 
 				if(number <= balance) {
 					currentbet = number;
-					printf("You're betting: %d\n", currentbet);
+					printf("You're betting: %d euros\n", currentbet);
 					balance =  balance - currentbet;
-					printf("Your current balance is: %d\n", balance);
+					printf("Your current balance is: %d euros\n", balance);
 				}
 				else if (number > balance) {
 					printf("Getting a little excited, aren't we? Bet on a value"
-						" you can actually afford, please.\n");
+							" you can actually afford, please.\n");
 				}
 				else {
 					printf("Dude.......\n");
 				}
 
-				printf("Please select an option: \n");
+				printf("What next my guy?: \n");
 				scanf("%c", &option);
 
 				if(option == 'n') {
@@ -60,17 +60,20 @@ int main(void) {
 				else if(option == 'e') {
 					eCase();
 				}
+				else if(option == 'o') {
+					oCase();
+				}
 
 				break;
 
 
 			case 'n':
-				bet_type = 'n';
 
 				if (currentbet == 0) {
 					printf ("Bet first, my dude\n");
 				}
 				else { 
+					betType = 'n';
 					nCase();
 				}
 
@@ -78,11 +81,11 @@ int main(void) {
 
 
 			case 'e':
-				bet_type = 'e';
-
+				
 				if (currentbet == 0) {
 					printf ("Bet first, my dude\n");
 				} else {
+					betType = 'e';
 					eCase();
 				}
 
@@ -90,11 +93,11 @@ int main(void) {
 
 
 			case 'o':
-				bet_type = 'o';
 
 				if (currentbet == 0) {
 					printf ("Bet first, my dude\n");
 				} else {
+					betType = 'o';
 					oCase();
 				}
 
@@ -110,19 +113,25 @@ int main(void) {
 					rCase();
 				}
 
+				break;
+
 
 			case 'h':
 
-				printf("Can't you read what was written in the beginning...?\n"
-					"Fine! Before you can do anything, you have to bet. To do"
-					" that, choose 'b'. Next you can choose what kind of bet you"
-					" want. 'n' for 1-36 and if you win, you get 35x the amount"
-					" you put down. 'e' for even numbers, and 'o' for odd."
-					" You get double the amount. Once you're done playing, just"
-					"choose 'c' and we'll give you your total. Capiche?\n");
+				hCase();
 
+				break;
+
+			case 's':
+
+				printf("Your current balance is: %d euros\n", balance);
+
+				break;
 
 			case 'c':
+
+				printf("Oh... Alright... I hope to see you again soon! :) \n");
+				printf("But hey! You're leaving with %d euros!\n", balance);
 				return option;
 
 
