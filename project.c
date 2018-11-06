@@ -51,7 +51,7 @@ int main(void) {
 					printf("Dude.......\n");
 				}
 
-				printf("What next my guy?: \n");
+				printf("What next my guy?\n");
 				scanf("%c", &option);
 
 				if(option == 'n') {
@@ -77,6 +77,9 @@ int main(void) {
 					nCase();
 				}
 
+				printf("What now? Ready to get the ball rolling? \n");
+				scanf("%c", &option);
+
 				break;
 
 
@@ -89,6 +92,9 @@ int main(void) {
 					eCase();
 				}
 
+				printf("What now? Ready to get the ball rolling? \n");
+				scanf("%c", &option);
+
 				break;
 
 
@@ -100,6 +106,9 @@ int main(void) {
 					betType = 'o';
 					oCase();
 				}
+
+				printf("What now? Ready to get the ball rolling? \n");
+				scanf("%c", &option);
 
 				break;
 
@@ -120,11 +129,16 @@ int main(void) {
 
 				hCase();
 
+				printf("Got it memorized? Let us return to the fun stuff!\n");
+				scanf("%c", &option);
+
 				break;
 
 			case 's':
 
 				printf("Your current balance is: %d euros\n", balance);
+				printf("You still have some good cash with you! What now? \n");
+				scanf("%c", &option);
 
 				break;
 
