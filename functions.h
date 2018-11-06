@@ -101,9 +101,6 @@ void rCase() {
 
         printf("And the winning number isss......... %d!\n", number);
 
-		for (int i = 0; i <= 36; i++) {
-        	printf("And the winning number isss......... %d!\n", number);
-        }
 
         if (chosenNumber == number) {
         	currentbet = currentbet * 35;
@@ -124,7 +121,6 @@ void rCase() {
 
 	else if (betType == 'e') {
 
-		eCase();
 		number = rand();
 		number = number % 2 == 0;
         printf("And the winning number isss......... %d!\n", number);
@@ -149,7 +145,6 @@ void rCase() {
 
 	else if (betType == 'o') {
 
-		oCase();
 		number = rand();
 		number = !(number % 2 == 0);
         printf("And the winning number isss......... %d!\n", number);
@@ -179,10 +174,10 @@ void rCase() {
 void hCase () {
 
 	printf("Can't you read what was written in the beginning...?\n"
-					"Fine! Before you can do anything, you have to bet. To do"
-					" that, choose 'b'. Next you can choose what kind of bet you"
-					" want. 'n' for 1-36 and if you win, you get 35x the amount"
-					" you put down. 'e' for even numbers, and 'o' for odd."
-					" You get double the amount. Once you're done playing, just"
-					"choose 'c' and we'll give you your total. Capiche?\n");
+			"Fine! Before you can do anything, you have to bet. To do"
+			" that, choose 'b'. Next you can choose what kind of bet you"
+			" want. 'n' for 1-36 and if you win, you get 35x the amount"
+			" you put down. 'e' for even numbers, and 'o' for odd."
+			" You get double the amount. Once you're done playing, just"
+			"choose 'c' and we'll give you your total. Capiche?\n");
 }
