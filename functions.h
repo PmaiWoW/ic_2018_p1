@@ -30,11 +30,6 @@ void nCase () {
 	else {
 		printf("You little sneak! Choose again.\n");
 	}	
-
-	// Will ask the user which option do they want to choose
-	printf("What next?\n");
-	// And will save it on the option variable
-	scanf("%c", &option);
 }
 
 // Function for the E option
@@ -55,12 +50,6 @@ void eCase() {
 	else {
 		printf("Hey! You chose even numbers, now you have to comply!\n");
 	}
-			
-
-	// Will ask the user which option do they want to choose
-	printf("What next?\n");
-	// And will save it on the option variable
-	scanf("%c", &option);
 }
 
 
@@ -82,11 +71,6 @@ void oCase() {
 	else {
 		printf("Hey! You chose odd numbers, now you have to comply!\n");
 	}
-			
-	// Will ask the user which option do they want to choose
-	printf("What next?\n");
-	// And will save it on the option variable
-	scanf("%c", &option);
 }
 
 
