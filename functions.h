@@ -16,6 +16,7 @@ void nCase () {
  		
 }
 
+
 // Function for the E option
 void eCase() {
 
@@ -100,6 +101,7 @@ void rCase() {
         }
 	}
 
+
 	// This will check for even numbers
 	else if (betType == 'e') {
 		// Will generate a random even number
@@ -135,6 +137,7 @@ void rCase() {
         }
 	}
 
+
 	// This will check for odd numbers
 	else if (betType == 'o') {
 		// Will generate a random odd number
@@ -169,11 +172,13 @@ void rCase() {
         }
 	}
 
+
 	// Error message
 	else {
 		printf("Uh-oh... Something went wrong here...\n");
 	}
 }
+
 
 // Function for the H option
 void hCase () {
