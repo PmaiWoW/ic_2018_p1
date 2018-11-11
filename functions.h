@@ -69,36 +69,36 @@ void rCase() {
 		// Will generate a random number between 1-36
 		number = rand() % (36 + 1 - 0) + 0;
 
-        printf("And the winning number isss......... %d!\n", number);
+        	printf("And the winning number isss......... %d!\n", number);
 
 
-        // Will check if the generated number matches the player's
-        if (chosenNumber == number) {
-        	// If it matches, it will give the player 35x the value they placed
-        	currentbet = currentbet * 35;
+        	// Will check if the generated number matches the player's
+        	if (chosenNumber == number) {
+        		// If it matches, it will give the player 35x the value they placed
+        		currentbet = currentbet * 35;
 
-        	printf("Hey! Congrats my guy, you just won %d euros!\n", currentbet);
+        		printf("Hey! Congrats my guy, you just won %d euros!\n", currentbet);
         	
-        	// Will update the balance and current bet
-        	balance = currentbet + balance;
-        	currentbet = 0;
+        		// Will update the balance and current bet
+        		balance = currentbet + balance;
+        		currentbet = 0;
         	
-        	// Will show the player how much they have
-        	printf("Your current balance is: %d euros\n", balance);
-        	printf("Current bet is: %d euros\n", currentbet);
-        }
-        // If it doesn't match
-        else {
-        	printf("... Shucks... Better luck next time, though!\n");
+        		// Will show the player how much they have
+        		printf("Your current balance is: %d euros\n", balance);
+        		printf("Current bet is: %d euros\n", currentbet);
+        	}
+        	// If it doesn't match
+       		 else {
+        		printf("... Shucks... Better luck next time, though!\n");
         	
-        	// Will update the balance and current bet
-        	balance = balance - currentbet;
-        	currentbet = 0;
+        		// Will update the balance and current bet
+        		balance = balance - currentbet;
+        		currentbet = 0;
         	
-        	// Will show the player how much they have
-        	printf("Your current balance is: %d euros\n", balance);
-        	printf("Your current bet is: %d euros\n", currentbet);
-        }
+        		// Will show the player how much they have
+        		printf("Your current balance is: %d euros\n", balance);
+        		printf("Your current bet is: %d euros\n", currentbet);
+        	}
 	}
 
 
@@ -107,34 +107,35 @@ void rCase() {
 		// Will generate a random even number
 		number = 2 * (2 + rand() % (36 - 2 + 1));
 
-        printf("And the winning number isss......... %d!\n", number);
+        	printf("And the winning number isss......... %d!\n", number);
 
-        // Will check if the generated number matches the player's
-        if (chosenNumber == number) {
-        	// If it matches, it will give the player double the amount they placed
-        	currentbet = currentbet * 2;
-        	printf("Hey! Congrats my guy, you just won %d euros!\n", currentbet);
+        	// Will check if the generated number matches the player's
+        	if (chosenNumber == number) {
+        		// If it matches, it will give the player double the amount they placed
+        		currentbet = currentbet * 2;
+        		printf("Hey! Congrats my guy, you just won %d euros!\n", currentbet);
         	
-        	// Will update the balance and current bet
-        	balance = currentbet + balance;
-        	currentbet = 0;
+        		// Will update the balance and current bet
+        		balance = currentbet + balance;
+        		currentbet = 0;
         	
-        	// Will show the player how much they have
-        	printf("Your current balance is: %d euros\n", balance);
-        	printf("Current bet is: %d euros\n", currentbet);
-        }
-        // If it doesn't match
-        else {
-        	printf("... Shucks... Better luck next time, though!\n");
+        		// Will show the player how much they have
+        		printf("Your current balance is: %d euros\n", balance);
+        		printf("Current bet is: %d euros\n", currentbet);
+       		}
+		
+        	// If it doesn't match
+        	else {
+        		printf("... Shucks... Better luck next time, though!\n");
 
-        	// Will update the balance and current bet
-        	balance = balance - currentbet;
-        	currentbet = 0;
+        		// Will update the balance and current bet
+        		balance = balance - currentbet;
+        		currentbet = 0;
         	
-        	// Will show the player how much they have
-        	printf("Your current balance is: %d euros\n", balance);
-        	printf("Your current bet is: %d euros\n", currentbet);
-        }
+        		// Will show the player how much they have
+        		printf("Your current balance is: %d euros\n", balance);
+        		printf("Your current bet is: %d euros\n", currentbet);
+       		}
 	}
 
 
@@ -143,33 +144,33 @@ void rCase() {
 		// Will generate a random odd number
 		number = 2 * (2 + rand() % (36 - 2 - 1));
 
-        printf("And the winning number isss......... %d!\n", number);
+        	printf("And the winning number isss......... %d!\n", number);
 
-        // If it matches, it will give the player double the amount they placed
-        if (number == number) {
-        	currentbet = currentbet * 2;
-        	printf("Hey! Congrats my guy, you just won %d euros!\n", currentbet);
+        	// If it matches, it will give the player double the amount they placed
+        	if (number == number) {
+        		currentbet = currentbet * 2;
+        		printf("Hey! Congrats my guy, you just won %d euros!\n", currentbet);
 
-        	// Will update the balance and current bet
-        	balance = currentbet + balance;
-        	currentbet = 0;
+        		// Will update the balance and current bet
+        		balance = currentbet + balance;
+        		currentbet = 0;
 
-        	// Will show the player how much they have
-        	printf("Your current balance is: %d euros\n", balance);
-        	printf("Current bet is: %d euros\n", currentbet);
-        }
-        // If it doesn't match
-        else {
-        	printf("... Shucks... Better luck next time, though!\n");
+        		// Will show the player how much they have
+        		printf("Your current balance is: %d euros\n", balance);
+        		printf("Current bet is: %d euros\n", currentbet);
+        	}
+        	// If it doesn't match
+        	else {
+        		printf("... Shucks... Better luck next time, though!\n");
         	
-        	// Will update the balance and current bet
-        	balance = balance - currentbet;
-        	currentbet = 0;
+        		// Will update the balance and current bet
+        		balance = balance - currentbet;
+        		currentbet = 0;
         	
-        	// Will show the player how much they have
-        	printf("Your current balance is: %d euros\n", balance);
-        	printf("Your current bet is: %d euros\n", currentbet);
-        }
+        		// Will show the player how much they have
+        		printf("Your current balance is: %d euros\n", balance);
+        		printf("Your current bet is: %d euros\n", currentbet);
+        	}
 	}
 
 
