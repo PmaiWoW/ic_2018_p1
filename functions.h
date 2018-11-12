@@ -13,7 +13,18 @@ char betType = '0'; // Variable that will serve to check which kind of bet the
 // Function for the N option
 void nCase () {
  		
- 		
+ 	printf("What number do you want to bet on, Sr.?\n");
+	scanf("%d", chosenNumber);
+
+ 	// It will check the number, if it is lower than 36, and higher than 1.
+	if(number <= 36 && number >= 1){
+		printf("You are betting on the number: %d\n", chosenNumber);	
+	}
+
+	// Player needs to bet first.
+	else {
+		printf(" - You need to bet first dummy... º-º \n  ");
+	}
 }
 
 
@@ -184,5 +195,29 @@ void rCase() {
 // Function for the H option
 void hCase () {
 
+	// Explantion of the game.
+	printf(" - 1st choose 'b' to bet between 1 to 100.\n  ");
+
+	printf(" - NOW only after you made a bet you may choose 3 conditions, 'n', 'e', 'o'\n");
+
+	printf(" - 'n' -> You will bet on numbers between 1 to 36, and win up to 35x the amount"
+	"you bet.\n  ");
+	printf(" - 'e' -> You will bet on even numbers, and get up to double the amount you bet.\n  ");
+	printf(" - 'o' -> You will bet on odd numbers and get up to double the amount you bet.\n  ");
+
+	printf(" - 'r' -> The table will roll to get a random number.\n  ");
+	printf(" - 'h' -> This is your SOS, in case you get lost in here.\n  ");
+	printf(" - 's' -> This will show your balance throughout the game. If you have one.\n  ");
+	printf(" - 'c' -> You ain't got money, out. OUT OF HERE!\n  ");
+}
+
+
+void sCase() {
+
+	// It only shows your balance in the current moment.
+	printf(" - Your currently have: %d euros\n", balance);
+
 	
+	printf("What do you wish to do now, Sr.?\n");
+	scanf("%d", &option);
 }
