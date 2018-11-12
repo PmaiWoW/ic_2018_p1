@@ -43,7 +43,41 @@ int main(void) {
 			// A case for the option B
 			case 'b':
 			
+				// A case for the option B
+			case 'b':
+			
+				// Player must bet between 1 to 100.
+        			printf(" - How much do you want to bet, Sr.?\n  ");
+        			scanf("%d", &amount);
+
+				if (amount <= balance) {
+					printf("Good bet, Sr., good bet!\n");
+					currentBet = currentBet + amount;
+					balance = balance - amount;
+					printf("Your balance is: %d \n", balance);
+					printf("Your current bet is: %d \n", currentBet);
+				}
+				else if (amount > balance) {
+					printf("Sr., please bet an amount you can afford, please.\n");
+				}
+				else {
+					printf("I do not know what you just attempted, Sr.\n");
+				}
 				
+				printf("And now?\n  ");
+        			scanf("%d", &option);
+
+				if(option == 'n') {
+					nCase();
+				} else if (option == 'e') {
+					eCase();
+				} else if (option == 'o') {
+					oCase();
+				} else if (option == 'h') {
+					hcase();
+				} else if (option == 's') {
+					sCase();
+				}
 
 				break;
 
@@ -113,7 +147,13 @@ int main(void) {
 			// A case for the option R
 			case 'r':
 
-				
+				if (currentBet == 0) {
+					printf("Please place a bet first, Sr.);
+				}
+				else {
+					rCase();
+				}
+
 
 				break;
 
@@ -121,6 +161,11 @@ int main(void) {
 			// A case for the option H
 			case 'h':
 
+				hCase();
+				
+
+				printf(" What now, Sr.?\n  ");
+        			scanf("%d", &option);
 				
 				break;
 
@@ -128,7 +173,7 @@ int main(void) {
 			// A case for the option S
 			case 's':
 
-				
+				sCase();
 
 				break;
 
